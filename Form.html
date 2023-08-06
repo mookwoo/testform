@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This Is Only A Test Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: linear-gradient(to bottom, #FFD700, #FFA500);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-smoothing: antialiased; /* Make the text slightly rounded */
+            -moz-osx-font-smoothing: grayscale; /* For Firefox */
+        }
+
+        form {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 15px;
+            width: 80%;
+            max-width: 500px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            text-align: center; /* Center the name of the form */
+            font-weight: bold; /* Make the form name bolder */
+        }
+
+        label, input, select {
+            display: block;
+            width: 80%;
+            margin: 10px auto;
+            text-align: center;
+        }
+
+        input[type="text"], input[type="email"], input[type="tel"], input[type="date"], select, input[type="file"] {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-weight: bold; /* Make the text a bit bolder */
+        }
+
+        input[type="submit"] {
+            cursor: pointer;
+            background-color: red;
+            border: none;
+            padding: 15px 25px;
+            border-radius: 10px;
+            color: white;
+            font-size: 1.2em;
+            display: block;
+            margin: 20px auto 0 auto; /* Increased top margin to 20px */
+        }
+
+        .warning {
+            color: red;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .required:invalid {
+            animation: shake 0.3s;
+        }
+
+        @keyframes shake {
+            0%, 100% {
+                transform: translateX(0);
+            }
+            10%, 30%, 50%, 70%, 90% {
+                transform: translateX(-10px);
+            }
+            20%, 40%, 60%, 80% {
+                transform: translateX(10px);
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<form action="#" method="post" enctype="multipart/form-data">
+    <h2>This Is Only A Test Form</h2>
+    <p class="warning">Do not enter personally identifiable information!</p>
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" name="name" class="required" required>
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" class="required" required>
+    
+    <label for="phone">Phone:</label>
+    <input type="tel" id="phone" name="phone">
+    
+    <label for="address">Address:</label>
+    <input type="text" id="address" name="address">
+    
+    <label for="city">City:</label>
+    <input type="text" id="city" name="city">
+    
+    <label for="state">State:</label>
+    <select id="state" name="state">
+        <!-- Add all 50 states here -->
+    </select>
+    
+    <label for="zip">Zip Code:</label>
+    <input type="text" id="zip" name="zip">
+    
+    <label for="position">Position Applied For:</label>
+    <input type="text" id="position" name="position">
+    
+    <label for="resume">Upload Resume:</label>
+    <input type="file" id="resume" name="resume">
+    
+    <input type="submit" value="Submit">
+</form>
+
+<script>
+    // Code for handling the shaking of required fields if they are missing information
+    // ... as before
+</script>
+
+</body>
+</html>
